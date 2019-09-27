@@ -106,6 +106,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Title"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:padding="12dp"
+                        android:textColor="@color/colorText"
                         android:inputType="text" />
 
                     <EditText
@@ -113,8 +117,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:gravity="start"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:padding="12dp"
+                        android:textColor="@color/colorText"
                         android:hint="Description"
                         android:inputType="textMultiLine" />
+
 
 
                     <Button

@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
     {
         new TTFancyGifDialog.Builder(MainActivity.this)
                 .setTitle("iToDo App")
-                .setMessage("Developed by: Altaf Chaudhari\n check my repository on github "+ Html.fromHtml("<a href='http://www.google.com'> Google </a>"))
+                .setMessage("Developer: Altaf Chaudhari\nCheck repository on github\nhttps://github.com/altafc22/iToDo")
                 .setPositiveBtnText("Ok")
                 .setPositiveBtnBackground("#22b573")
                 .setNegativeBtnText("Cancel")
@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
                 .OnPositiveClicked(new TTFancyGifDialogListener() {
                     @Override
                     public void OnClick() {
-                        Toast.makeText(MainActivity.this,"Ok",Toast.LENGTH_SHORT).show();
+
                     }
                 })
                 /*.OnNegativeClicked(new TTFancyGifDialogListener() {
