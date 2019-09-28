@@ -64,6 +64,7 @@
                         <gq.altafchaudhari.itodo.CircleCheckBox
                             android:id="@+id/checkboxFinished"
                             android:layout_width="40dp"
+                            android:visibility="gone"
                             android:layout_height="40dp"
                             app:borderThickness="2dp"
                             app:circleBorderColor="#00CFAD"
@@ -76,7 +77,7 @@
                             app:tickColor="#ffffff"
                             app:tickThickness="1dp" />
                         <ImageView
-                            android:visibility="gone"
+                            android:visibility="visible"
                             android:id="@+id/edit_todo"
                             android:layout_width="35dp"
                             android:layout_height="35dp"

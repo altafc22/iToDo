@@ -1,5 +1,6 @@
 package gq.altafchaudhari.itodo.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
@@ -69,24 +71,25 @@ public class ToDoAdapter extends ListAdapter<ToDo, ToDoAdapter.TodoHolder> {
         holder.bind(todo, todoClickCallBack);
         is_finished = todo.isIs_finished();
 
-        binding.checkboxFinished.setOnCheckedChangeListener(new CircleCheckBox.OnCheckedChangeListener() {
+        /*binding.checkboxFinished.setOnCheckedChangeListener(new CircleCheckBox.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CircleCheckBox view, boolean isChecked) {
-                MainActivity.checked = isChecked;
+
                 id = todo.getId();
                 title = todo.getTitle();
                 description = todo.getDescription();
                 date = todo.getDate();
                 note_color = todo.getNote_color();
                 is_finished = isChecked;
+                System.out.println(id+"|"+title+"|"+description+"|"+date+"|"+note_color+"|"+true);
                 ToDo new_todo = new ToDo(id,title,description,date,note_color,isChecked);
                 viewModel = ViewModelProviders.of((FragmentActivity) view.getContext()).get(ToDoViewModel.class);
                 viewModel.update(new_todo);
                 Toasty.success(context, "ToDo Updated", Toasty.LENGTH_SHORT,false).show();
             }
-        });
+        });*/
 
-        /*binding.editTodo.setOnClickListener(v -> {
+        binding.editTodo.setOnClickListener(v -> {
             Intent editIntent = new Intent(context, EditToDoActivity.class);
             id = todo.getId();
             title = todo.getTitle();
@@ -107,7 +110,7 @@ public class ToDoAdapter extends ListAdapter<ToDo, ToDoAdapter.TodoHolder> {
             editIntent.putExtras(mBundle);
 
             context.startActivity(editIntent);
-        });*/
+        });
 
     }
 

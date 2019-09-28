@@ -38,7 +38,7 @@ import gq.altafchaudhari.itodo.view_model.ToDoViewModel;
 public class MainActivity extends AppCompatActivity {
     private ToDoViewModel todoViewModel;
     ActivityMainBinding binding;
-    ToDoAdapter adapter;
+    public  static ToDoAdapter adapter;
     private static final String TODO = "todo";
     private Toolbar mTopToolbar;
 
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         binding.noteRecyclerView.setAdapter(adapter);
     }
 
-    private void setUpViewModel(){
+    public void setUpViewModel(){
         todoViewModel = ViewModelProviders.of(this).get(ToDoViewModel.class);
         todoViewModel.getTodoList().observe(this,todos -> {
             adapter.submitList(todos);
